@@ -27,8 +27,8 @@ workflows:
     jobs:
       - run_tests
       - build_image
-          requires:
-            - run_tests
+        requires:
+          - run_tests
       - deploy
-          requires:
-            - build_image
+        requires:
+          - build_image
